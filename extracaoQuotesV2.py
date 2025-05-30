@@ -26,10 +26,13 @@ browser.get(url)
 
 # Buscando pela tag
 #find_element(By.TAG_NAME, "nome da tag")
-
 # Buscando pela classe
 #find_element(By.CLASS_NAME, "nome classe")
 
 ## Frases
-browser.find_elements(By.CLASS_NAME, "text")
 
+## Frases
+browser.find_elements(By.TAG_NAME, "a")
+
+
+browser.quit()
