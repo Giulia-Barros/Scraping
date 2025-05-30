@@ -13,7 +13,7 @@ service = Service()
 # Cria um objeto ChromeOptions que permite configurar opções do navegador (ex.: idioma)
 options = webdriver.ChromeOptions()
 
-# Abre uma janela no navegador com as configurações especificadas 
+# Abre uma janela no navegador com as configurações especificadas
 browser = webdriver.Chrome(service=service, options=options)
 #browser.maximize_window()
 
@@ -22,24 +22,35 @@ browser.get(url)
 
 #time.sleep(10)
 
-#ENCONTRANDO 
+#ENCONTRANDO
 
 # Buscando pela tag
 #find_element(By.TAG_NAME, "nome da tag")
 # Buscando pela classe
 #find_element(By.CLASS_NAME, "nome classe")
 
-## Frases
+# Frases
+# frases = browser.find_elements(By.CLASS_NAME, "text")
 
-frases = browser.find_elements(By.CLASS_NAME, "text")
+# # Imprimir o texto de todos os links
+# for f in frases:
+#     text = f.text.strip()
+#     print(text)
 
-# Imprimir o texto de todos os links
-for f in frases:
-    text = f.text.strip()
-    print(text)
+# # Autor
+# autor = browser.find_elements(By.CLASS_NAME, "author")
+
+# for a in autor:
+#     text = a.text.strip()
+#     print(text)
+
+# ## Tags
+# tag = browser.find_elements(By.CLASS_NAME, "tag")
+
+# for t in tag:
+#     text = t.text.strip()
+#     print(text)
+
+
 
 browser.quit()
-
-## Autor
-
-## Tags
